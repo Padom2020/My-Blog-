@@ -1,0 +1,270 @@
+*{
+box-sizing: border-box;
+}
+
+body{
+    padding: 0px;
+    margin: 0px;
+    background-color: #f6f6f6;
+    font-family: 'Lora', serif;
+}
+
+
+h1, h2, h3, h4, h5, h6{
+font-family: 'candal', serif;
+color: #444;
+margin: 5px;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.clearfix::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+header{
+    background: rgb(99, 12, 12);
+    height: 66px;
+}
+
+header *{
+    color: white
+}
+
+header .logo{
+    float: left;
+    height: inherit;
+    margin-left: 2em;
+  
+}
+ 
+header .logo-text{
+    margin: 10px;
+    font-family: 'candal', serif;
+}
+header .logo-text span{
+ color: black;
+}
+
+header ul{
+    float: right;
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+}
+
+header ul li{
+float: left;
+position: relative;
+}
+
+header ul li ul{
+    position: absolute;
+    top: 66px;
+    right: 0px;
+    width: 180px;
+    display: none;
+    z-index: 88888;
+}
+header ul li:hover ul{
+display: block;
+}
+
+
+header ul li ul li{
+    width: 100%;
+}
+
+header ul li ul li a{
+    padding: 10px;
+    color: white;
+    background: rgb(39, 8, 8);;
+
+}
+
+header ul li ul li a.logout{
+    color: red;
+}
+
+header ul li ul li a:hover{
+    background: grey;
+}
+
+
+header ul li a{
+display: block;
+padding: 21px;
+font-size: 1.1em;
+text-decoration: none;
+}
+
+header ul li a:hover{
+    background: black;
+    transition: 0.5s;
+}
+
+header .menu-toggle{
+display: none;
+}
+
+.page-wrapper a:hover{
+color: rgb(99, 12, 12);
+}
+
+/*post slider*/
+.post-slider{
+    position: relative;
+
+}
+
+.post-slider .slider-title{
+text-align: center;
+margin: 30px auto;
+}
+
+.post-slider .next{
+position: absolute;
+top: 50%;
+right: 30px;
+font-size: 2em;
+color: rgb(99, 12, 12);
+cursor: pointer;
+}
+
+.post-slider .prev{
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    font-size: 2em;
+    color: rgb(99, 12, 12);
+    cursor: pointer;
+    }
+
+.post-slider .post-wrapper{
+    width: 84%;
+    height: 350px;
+    padding: 10px 0px 10px 0px;
+    margin: 0px auto;
+    overflow: hidden;
+   
+}
+
+.post-slider .post-wrapper .post{
+    width: 300px;
+    height: 330px;
+    margin: 0px 10px;
+    display: inline-block;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 1rem 1rem 1rem -1rem #444;
+}
+
+.post-slider .post-wrapper .post .post-info{
+    height: 130px;
+    padding: 0px 5px;
+
+}
+
+.post-slider .post-wrapper .post .slider-image{
+    width: 100%;
+    height: 200px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+/* CONTENT STYLES*/
+.content{
+    width: 90%;
+    margin: 30px auto 30px;
+    border: 1px solid red;
+}
+
+.content .main-content{
+    width: 70%;
+    float: left;
+    border: 1px solid blue;
+}
+.content .main-content .post{
+    width: 95%;
+    height: 270px;
+    margin: 10px auto;
+    border-radius: 5px;
+    background: white;
+}
+
+.content .main-content .post .post-image{
+    width: 40%;
+    height: 100%;
+    float: left;
+}
+.content .main-content .recent-post-title{
+margin: 20px;
+
+}
+
+.content .sidebar{
+    width: 30%;
+    float: left;
+    border: 1px dashed green;
+    height: 300px;
+}
+
+/*MEDIA QUERIES*/
+@media only screen and (max-width: 750px){
+    header{
+        position: relative;
+    }
+    header ul{
+        width: 100%;
+        background: rgb(99, 12, 12);
+        max-height: 0px;
+        overflow: hidden;
+    }
+
+    .showing{
+        max-height: 100em;
+    }
+
+    header ul li{
+        width: 100%;
+        }
+
+        header ul li ul{
+            position: static;
+            display: block;
+            width: 100%;
+        
+        }
+
+        
+header ul li ul li a{
+    padding: 10px;
+    color: white;
+    background: rgb(99, 12, 12);
+    padding-left: 50px;
+}
+
+header ul li ul li a:hover{
+    background: rgb(39, 8, 8);;
+}
+
+header ul li ul li a.logout{
+    color: red;
+}
+
+header .menu-toggle{
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 1.9em;
+    }
+
+    header .logo{
+        margin-left: .5em;
+    }
+     
+}
